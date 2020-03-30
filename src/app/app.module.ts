@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser'
-import { NgModule } from '@angular/core'
+import { NgModule, InjectionToken } from '@angular/core'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -9,6 +9,7 @@ import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store'
 import { environment } from '../environments/environment'
 import { FormsModule } from '@angular/forms'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { Environment } from 'src/environments/environment.prod'
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,10 +23,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
   ],
   providers: [
     {
-      provide: NG_ENTITY_SERVICE_CONFIG,
-      useValue: {
-        baseUrl: 'http://localhost:3000',
-      },
+      // providing environment variables via DI
+      // https://codeburst.io/angular-dependency-injection-tips-ddb24b8244be
+      provide: Environment,
+      useValue: environment,
     },
   ],
   bootstrap: [AppComponent],

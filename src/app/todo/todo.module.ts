@@ -4,7 +4,6 @@ import { ListComponent } from './list/list.component'
 import { FormComponent } from './form/form.component'
 import { TodoRoutingModule } from './todo-routing.module'
 import { HttpClientModule } from '@angular/common/http'
-import { NG_ENTITY_SERVICE_CONFIG } from '@datorama/akita-ng-entity-service'
 import { TodoService } from './state'
 import { ReactiveFormsModule } from '@angular/forms'
 

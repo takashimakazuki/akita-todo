@@ -1,5 +1,5 @@
-<div class="container">
-  <form [formGroup]="form" (ngSubmit)="create()">
+<div class="container" *ngIf="form; else loading">
+  <form class="my-3" [formGroup]="form" (ngSubmit)="submit()">
     <div class="form-group">
       <label for="title">Title</label>
       <input
@@ -20,4 +20,9 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+  <div class="text-left">
+    <button class="btn btn-secondary" (click)="back()">Back to list</button>
+  </div>
 </div>
+
+<ng-template #loading></ng-template>

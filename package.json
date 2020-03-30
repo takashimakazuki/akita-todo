@@ -23,7 +23,6 @@
     "@angular/router": "~9.0.6",
     "@datorama/akita": "^4.22.0",
     "@datorama/akita-cli": "^6.1.0",
-    "@datorama/akita-ng-entity-service": "^1.0.0",
     "@ng-bootstrap/ng-bootstrap": "^6.0.2",
     "@popperjs/core": "^2.1.1",
     "bootstrap": "^4.4.1",

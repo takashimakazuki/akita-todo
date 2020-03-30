@@ -1,13 +1,15 @@
 <div class="container">
   <div class="text-right">
-    <button class="btn btn-success" routerLink="/todo/form">Create</button>
+    <button class="btn btn-success" routerLink="create">Create</button>
   </div>
   <table class="table table-striped my-4">
     <thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">title</th>
+        <th scope="col">detail</th>
         <th scope="col">edit</th>
+        <th scope="col">delete</th>
       </tr>
     </thead>
     <tbody>
@@ -16,7 +18,14 @@
         <td>{{ todo.title }}</td>
         <td>{{ todo.detail }}</td>
         <td>
-          <button class="btn btn-success">edit</button>
+          <button class="btn btn-success" [routerLink]="['/todo', todo.id]">
+            edit
+          </button>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteTodo(todo.id)">
+            Delete
+          </button>
         </td>
       </tr>
     </tbody>
