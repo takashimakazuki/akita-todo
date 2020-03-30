@@ -1,0 +1,23 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="create()">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input
+        formControlName="title"
+        type="text"
+        class="form-control"
+        id="title"
+        placeholder="Enter title"
+      />
+      <label for="detail">Detail</label>
+      <input
+        formControlName="detail"
+        type="text"
+        class="form-control"
+        id="detail"
+        placeholder="Enter detail"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
